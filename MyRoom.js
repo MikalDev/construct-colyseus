@@ -9,7 +9,7 @@ exports.MyRoom = class extends colyseus.Room {
   }
 
   onMessage (client, message) {
-    this.broadcast({bcast : "rcv:"+message.move+"from"+client.id})
+    this.broadcast({bcast : "rcv:"+message.move+" from:"+client.id})
   }
 
   onLeave (client, consented) {
